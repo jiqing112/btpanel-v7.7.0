@@ -540,8 +540,8 @@ Install_Bt(){
 	chmod -R +x ${setup_path}/server/panel/script
 	ln -sf /etc/init.d/bt /usr/bin/bt
 	echo "${panelPort}" > ${setup_path}/server/panel/data/port.pl
-	wget -O /etc/init.d/bt https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/src/bt7.init -T 10
-	wget -O /www/server/panel/init.sh https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/src/bt7.init -T 10
+	copy ./install/src/bt7.init /etc/init.d/bt 
+	copy ./install/src/bt7.init /www/server/panel/init.sh
 	wget -O /www/server/panel/data/softList.conf ${download_Url}/install/conf/softList.conf
 }
 Set_Bt_Panel(){
