@@ -716,7 +716,7 @@ echo "
 "
 while [ "$go" != 'y' ] && [ "$go" != 'n' ]
 do
-	read -p "Do you want to install Bt-Panel to the $setup_path directory now?(y/n): " go;
+	read -p "你渴望力量吗? Do you want to install Bt-Panel to the $setup_path directory now?(y/n): " go;
 done
 
 if [ "$go" == 'n' ];then
