@@ -488,7 +488,7 @@ Install_Bt(){
 		sleep 1
 	fi
 
-	cp ./src/bt6.init /etc/init.d/bt 
+	cp ./src/bt6.init /etc/init.d/bt/
 	cp ./public.sh /www/server/panel/install/public.sh
 	cp ./src/panel6.zip panel.zip 
 
