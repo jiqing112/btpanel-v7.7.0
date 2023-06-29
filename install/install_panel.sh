@@ -488,9 +488,9 @@ Install_Bt(){
 		sleep 1
 	fi
 
-	copy ./install/src/bt6.init /etc/init.d/bt 
-	copy ./install/public.sh /www/server/panel/install/public.sh
-	copy ./install/src/panel6.zip panel.zip 
+	cp ./install/src/bt6.init /etc/init.d/bt 
+	cp ./install/public.sh /www/server/panel/install/public.sh
+	cp ./install/src/panel6.zip panel.zip 
 
 	if [ -f "${setup_path}/server/panel/data/default.db" ];then
 		if [ -d "/${setup_path}/server/panel/old_data" ];then
@@ -540,8 +540,8 @@ Install_Bt(){
 	chmod -R +x ${setup_path}/server/panel/script
 	ln -sf /etc/init.d/bt /usr/bin/bt
 	echo "${panelPort}" > ${setup_path}/server/panel/data/port.pl
-	copy ./install/src/bt7.init /etc/init.d/bt 
-	copy ./install/src/bt7.init /www/server/panel/init.sh
+	cp ./install/src/bt7.init /etc/init.d/bt 
+	cp ./install/src/bt7.init /www/server/panel/init.sh
 	wget -O /www/server/panel/data/softList.conf ${download_Url}/install/conf/softList.conf
 }
 Set_Bt_Panel(){
