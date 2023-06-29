@@ -12,7 +12,7 @@ fi
 
 public_file=/www/server/panel/install/public.sh
 publicFileMd5=$(md5sum ${public_file} 2>/dev/null|awk '{print $1}')
-md5check="918CC0E14AC92F9D51BFD5CE6A076C36"
+md5check="7ca3e48163d469faf3e891caafd505c6"
 if [ "${publicFileMd5}" != "${md5check}"  ]; then
 	wget -O Tpublic.sh https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/public.sh -T 20;
 	publicFileMd5=$(md5sum Tpublic.sh 2>/dev/null|awk '{print $1}')
