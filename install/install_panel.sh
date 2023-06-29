@@ -488,9 +488,9 @@ Install_Bt(){
 		sleep 1
 	fi
 
-	cp ./install/src/bt6.init /etc/init.d/bt 
-	cp ./install/public.sh /www/server/panel/install/public.sh
-	cp ./install/src/panel6.zip panel.zip 
+	cp ./src/bt6.init /etc/init.d/bt 
+	cp ./public.sh /www/server/panel/install/public.sh
+	cp ./src/panel6.zip panel.zip 
 
 	if [ -f "${setup_path}/server/panel/data/default.db" ];then
 		if [ -d "/${setup_path}/server/panel/old_data" ];then
