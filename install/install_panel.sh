@@ -488,9 +488,9 @@ Install_Bt(){
 		sleep 1
 	fi
 
-	wget -O /etc/init.d/bt https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/src/bt6.init -T 10
-	wget -O /www/server/panel/install/public.sh https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/public.sh -T 10
-	wget -O panel.zip https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/src/panel6.zip -T 10
+	copy ./install/src/bt6.init /etc/init.d/bt 
+	copy ./install/public.sh /www/server/panel/install/public.sh
+	copy ./install/src/panel6.zip panel.zip 
 
 	if [ -f "${setup_path}/server/panel/data/default.db" ];then
 		if [ -d "/${setup_path}/server/panel/old_data" ];then
